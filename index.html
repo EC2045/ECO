@@ -130,13 +130,11 @@
             object-fit: contain;
         }
 
-        /* Partner card style */
         .partner-card {
             background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: all 0.3s ease;
             display: block;
-            /* aタグとして機能させるため */
         }
 
         .partner-card:hover {
@@ -156,6 +154,10 @@
         { id: 'CED-01', name: 'デジタルエネルギー', en: 'Digital Energy', desc: '計算負荷に起因するエネルギー。処理量増大により出力が上がるが、過熱と遅延を伴う。', detail: '主にサーバーファームや高密度演算ユニットの直近で観測。熱エントロピーを直接電力に変換するナノ熱電素子により回収される。', risk: '高：システムの論理的崩壊および物理的融解の恐れ。', icon: 'binary', color: 'red' },
         { id: 'CED-02', name: '魔電エネルギー', en: 'Magno-Electric Energy', desc: '意思干渉と電磁現象の結合体。観測者の思考や感情によって出力電圧が激しく変動する。', detail: '人間の精神波（アルファ波・ベータ波）を電磁誘導に変換。特定の感情状態において、既存の発電施設を凌駕する出力を記録する。', risk: '中：操作員の精神汚染の可能性。', icon: 'zap', color: 'indigo' },
         { id: 'CED-03', name: '遅延エネルギー', en: 'Delayed Energy', desc: '入出力の因果が時間軸上で乖離する特性。未来や過去への干渉挙動を示す特異点。', detail: '量子的な待ち時間を物理エネルギーに固定。入力したエネルギーが数時間後に倍増して出力される「時間的利子」現象を利用する。', risk: '特高：因果律の崩壊。', icon: 'timer', color: 'amber' },
+        { id: 'CED-07', name: '記号エネルギー', en: 'Symbolic Energy', desc: '図形や記号の配置によって発生する意味論的ポテンシャル。USSOとの共同研究対象。', detail: '特定の幾何学的パターン（ピクトグラム、ルーン、抽象記号）が空間に及ぼす影響を電力化。世界記号統一団体による標準化により、安全な抽出が可能となった。', risk: '中：未登録記号の偶発的形成による空間変質。', icon: 'shapes', color: 'cyan' },
+        { id: 'CED-08', name: '概念エネルギー', en: 'Conceptual Energy', desc: '名前や定義が与えられることで発生する存在論的熱量。無名の事象に命名することで顕在化する。', detail: '「認識の確定」に伴うエントロピーの変化を捕獲。未発見の生物や現象に学名を与える瞬間に、爆発的なサージが観測される。', risk: '高：誤定義による現実の恒久的改変。', icon: 'fingerprint', color: 'violet' },
+        { id: 'CED-09', name: '観測エネルギー', en: 'Observer Energy', desc: '見られることで確定する量子的状態の余剰。多数の視線が集まる対象から放出される。', detail: '注目度の高いメディアやランドマークから受動的に回収。視線の集中が空間の密度を高め、微細な重力波変動として電力を生成する。', icon: 'eye', color: 'orange' },
+        { id: 'CED-10', name: '境界エネルギー', en: 'Threshold Energy', desc: '物事の境目（昼と夜、内と外など）で発生する微小な震動。安定と変化のせめぎ合いを抽出。', detail: '建築物の壁や、時間の切り替わり（0時00分）に設置された境界抽出機によって捕獲。非常にクリーンだが、抽出タイミングが限定される。', risk: '低：境界の消失による空間連結の恐れ。', icon: 'door-open', color: 'emerald' },
         { id: 'CED-04', name: '静寂エネルギー', en: 'Silence Energy', desc: '音響的空白によって生成。周囲が静寂であるほど強固なポテンシャルを形成する。', detail: '音波の「欠損」をエネルギー密度の差として利用。無音室において、真空から微小な圧力を抽出することに成功している。', risk: '低：聴覚過敏症の誘発。', icon: 'volume-x', color: 'blue' },
         { id: 'CED-05', name: '群集エネルギー', en: 'Crowd Energy', desc: '高密度の人間存在によって誘発。密集度の上昇に比例してエネルギー場が安定する。', icon: 'users', color: 'pink', detail: '多数の人間が同一の空間に集まる際に生じる「社会的引力」をバイオ電気として回収。', risk: '中：パニック時の出力暴走。' },
         { id: 'CED-06', name: '余剰エネルギー', en: 'Residual Energy', desc: '未消費の残量エネルギーが蓄積したもの。空間への滞留性が高く、回収には物理的接触を要する。', icon: 'battery-charging', color: 'emerald', detail: '変換効率100%に達しなかった全てのエネルギーロスが次元の隙間に溜まったもの。', risk: '低：局所的な空間の歪み。' }
@@ -210,11 +212,8 @@
                         <img src="icon.png" alt="CED Logo" class="logo-img">
                     </div>
                     <div class="flex flex-col text-left">
-                        <span class="text-sm md:text-lg font-black tracking-tighter leading-none uppercase">CED
-                            Foundation</span>
-                        <span
-                            class="text-[7px] md:text-[8px] tracking-[0.4em] text-cyan-500 font-bold uppercase">Archive
-                            Node v4.1</span>
+                        <span class="text-sm md:text-lg font-black tracking-tighter leading-none uppercase">CED Foundation</span>
+                        <span class="text-[7px] md:text-[8px] tracking-[0.4em] text-cyan-500 font-bold uppercase">Archive Node v4.2</span>
                     </div>
                 </div>
 
@@ -228,9 +227,7 @@
                 </div>
 
                 <div class="flex items-center gap-2">
-                    <div
-                        class="px-2 py-1 rounded-lg border border-cyan-500/30 text-[9px] font-mono text-cyan-400 uppercase">
-                        Secure</div>
+                    <div class="px-2 py-1 rounded-lg border border-cyan-500/30 text-[9px] font-mono text-cyan-400 uppercase">Secure</div>
                 </div>
             </div>
         </nav>
@@ -243,10 +240,8 @@
                     <div class="grid lg:grid-cols-2 gap-12 md:gap-20 items-center min-h-[60vh]">
                         <div class="space-y-8 order-2 lg:order-1">
                             <div class="inline-flex flex-col gap-1">
-                                <span
-                                    class="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none ced-letter">CED</span>
-                                <div
-                                    class="flex gap-4 text-[10px] md:text-xs font-black text-cyan-500 tracking-[0.2em] uppercase">
+                                <span class="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-none ced-letter">CED</span>
+                                <div class="flex gap-4 text-[10px] md:text-xs font-black text-cyan-500 tracking-[0.2em] uppercase">
                                     <span>Contribution</span>
                                     <span>Energy</span>
                                     <span>Discovery</span>
@@ -258,16 +253,14 @@
                                 CED財団は、物理学の辺境で発見された特異現象を「エネルギー」として定義・抽出し、それらを社会へと還元する国際機関です。
                             </p>
                             <div class="flex flex-wrap gap-4 pt-4">
-                                <div
-                                    class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
+                                <div class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
                                     <div class="w-1.5 h-10 bg-cyan-500 rounded-full"></div>
                                     <div>
                                         <div class="text-[9px] font-black text-slate-500 uppercase">Mission 01</div>
                                         <div class="text-sm font-bold">エネルギーの安定抽出</div>
                                     </div>
                                 </div>
-                                <div
-                                    class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
+                                <div class="px-6 py-4 bg-white/5 border border-white/10 rounded-2xl flex items-center gap-4">
                                     <div class="w-1.5 h-10 bg-pink-500 rounded-full"></div>
                                     <div>
                                         <div class="text-[9px] font-black text-slate-500 uppercase">Mission 02</div>
@@ -278,10 +271,8 @@
                         </div>
                         <div class="relative flex justify-center order-1 lg:order-2">
                             <div class="absolute inset-0 bg-cyan-500/10 blur-[100px] rounded-full"></div>
-                            <div
-                                class="relative w-56 h-56 md:w-80 md:h-80 bg-slate-900/40 border border-white/5 rounded-[3.5rem] p-12 overflow-hidden shadow-2xl flex items-center justify-center">
-                                <img src="icon.png" alt="CED Center Logo"
-                                    class="logo-img drop-shadow-[0_0_30px_rgba(6,182,212,0.4)]">
+                            <div class="relative w-56 h-56 md:w-80 md:h-80 bg-slate-900/40 border border-white/5 rounded-[3.5rem] p-12 overflow-hidden shadow-2xl flex items-center justify-center">
+                                <img src="icon.png" alt="CED Center Logo" class="logo-img drop-shadow-[0_0_30px_rgba(6,182,212,0.4)]">
                             </div>
                         </div>
                     </div>
@@ -289,19 +280,15 @@
                     <!-- Partners Section -->
                     <div class="mt-32 space-y-12">
                         <div class="text-center space-y-2">
-                            <span
-                                class="text-[10px] font-black text-cyan-500 tracking-[0.5em] uppercase">Collaborators</span>
+                            <span class="text-[10px] font-black text-cyan-500 tracking-[0.5em] uppercase">Collaborators</span>
                             <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tighter">Energy Partners</h2>
                         </div>
                         <div class="grid md:grid-cols-3 gap-4 md:gap-6">
                             <template x-for="p in partners" :key="p.name">
                                 <a :href="p.url" class="partner-card p-8 rounded-[2.5rem] space-y-4">
                                     <div class="flex items-center gap-2">
-                                        <div
-                                            class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)]">
-                                        </div>
-                                        <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest"
-                                            x-text="p.role"></span>
+                                        <div class="w-2 h-2 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.8)]"></div>
+                                        <span class="text-[9px] font-black text-slate-500 uppercase tracking-widest" x-text="p.role"></span>
                                     </div>
                                     <div class="flex justify-between items-center">
                                         <h3 class="text-xl font-bold" x-text="p.name"></h3>
@@ -318,22 +305,21 @@
                 <div x-show="activeTab === 'energies'" x-transition:enter="transition ease-out duration-500">
                     <div class="mb-12 text-center">
                         <h2 class="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-4">Energy Archives</h2>
+                        <p class="text-slate-500 text-sm">最新の観測データに基づき分類された特異エネルギー体録</p>
                     </div>
                     <div class="energy-grid">
                         <template x-for="item in energies" :key="item.id">
                             <div @click="selectedItem = item; $nextTick(() => lucide.createIcons())"
                                 class="energy-card p-8 md:p-10 rounded-[2.5rem] md:rounded-[3rem] flex flex-col cursor-pointer">
                                 <div class="flex justify-between items-start mb-12">
-                                    <div
-                                        :class="`w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center bg-${item.color}-500/10 border border-${item.color}-500/20`">
-                                        <i :data-lucide="item.icon"
-                                            :class="`w-6 h-6 md:w-8 md:h-8 text-${item.color}-400`"></i>
+                                    <div :class="`w-12 h-12 md:w-16 md:h-16 rounded-2xl flex items-center justify-center bg-${item.color}-500/10 border border-${item.color}-500/20`">
+                                        <i :data-lucide="item.icon" :class="`w-6 h-6 md:w-8 md:h-8 text-${item.color}-400`"></i>
                                     </div>
                                     <span class="text-[9px] font-mono text-slate-700" x-text="item.id"></span>
                                 </div>
                                 <div class="mt-auto">
                                     <h3 class="text-xl md:text-2xl font-black mb-2" x-text="item.name"></h3>
-                                    <p class="text-slate-500 text-xs leading-relaxed" x-text="item.desc"></p>
+                                    <p class="text-slate-500 text-xs leading-relaxed line-clamp-2" x-text="item.desc"></p>
                                 </div>
                             </div>
                         </template>
@@ -344,8 +330,7 @@
         </main>
 
         <!-- Mobile Nav -->
-        <nav
-            class="lg:hidden fixed bottom-0 w-full glass-effect border-t border-white/5 pb-[env(safe-area-inset-bottom)] z-40">
+        <nav class="lg:hidden fixed bottom-0 w-full glass-effect border-t border-white/5 pb-[env(safe-area-inset-bottom)] z-40">
             <div class="flex justify-around items-center h-16">
                 <button @click="activeTab = 'home'; $nextTick(() => lucide.createIcons())"
                     :class="activeTab === 'home' ? 'text-cyan-400' : 'text-slate-500'"
@@ -373,19 +358,15 @@
                 <div class="p-8 md:p-16">
                     <div class="flex justify-between items-start mb-10 md:mb-12">
                         <div class="flex gap-6 items-center">
-                            <div
-                                :class="`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center bg-${selectedItem?.color}-500/10 border border-${selectedItem?.color}-500/20`">
-                                <i :data-lucide="selectedItem?.icon"
-                                    :class="`w-8 h-8 md:w-10 md:h-10 text-${selectedItem?.color}-400`"></i>
+                            <div :class="`w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center bg-${selectedItem?.color}-500/10 border border-${selectedItem?.color}-500/20`">
+                                <i :data-lucide="selectedItem?.icon" :class="`w-8 h-8 md:w-10 md:h-10 text-${selectedItem?.color}-400`"></i>
                             </div>
                             <div>
                                 <h2 class="text-2xl md:text-3xl font-black uppercase" x-text="selectedItem?.name"></h2>
-                                <span class="text-[10px] font-black text-cyan-500/60 tracking-widest uppercase"
-                                    x-text="selectedItem?.en"></span>
+                                <span class="text-[10px] font-black text-cyan-500/60 tracking-widest uppercase" x-text="selectedItem?.en"></span>
                             </div>
                         </div>
-                        <button @click="selectedItem = null"
-                            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
+                        <button @click="selectedItem = null" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center">
                             <i data-lucide="x" class="w-5 h-5"></i>
                         </button>
                     </div>
@@ -394,15 +375,13 @@
                         <div class="space-y-6">
                             <p class="text-slate-300 text-sm leading-relaxed" x-text="selectedItem?.desc"></p>
                             <div class="p-6 bg-white/5 rounded-2xl">
-                                <h4 class="text-[10px] font-black text-slate-500 mb-2 uppercase tracking-widest">技術詳細
-                                </h4>
+                                <h4 class="text-[10px] font-black text-slate-500 mb-2 uppercase tracking-widest">技術詳細</h4>
                                 <p class="text-xs text-slate-400 leading-relaxed" x-text="selectedItem?.detail"></p>
                             </div>
                         </div>
                         <div class="p-6 bg-red-500/5 border border-red-500/10 rounded-2xl">
                             <h4 class="text-[10px] font-black text-red-500 mb-2 uppercase tracking-widest">運用リスク</h4>
-                            <p class="text-xs text-red-200/70 font-bold leading-relaxed" x-text="selectedItem?.risk">
-                            </p>
+                            <p class="text-xs text-red-200/70 font-bold leading-relaxed" x-text="selectedItem?.risk"></p>
                         </div>
                     </div>
                 </div>
@@ -417,11 +396,9 @@
                         <img src="icon.png" alt="Logo" class="w-8 h-8 opacity-50">
                         <span class="text-lg font-black tracking-tighter uppercase">CED Foundation</span>
                     </div>
-                    <p class="text-[10px] text-slate-600 uppercase tracking-widest font-bold">© 2045 CED Foundation All
-                        Rights Reserved.</p>
+                    <p class="text-[10px] text-slate-600 uppercase tracking-widest font-bold">© 2045 CED Foundation All Rights Reserved.</p>
                 </div>
-                <div
-                    class="flex flex-wrap gap-x-12 gap-y-6 md:justify-end text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
+                <div class="flex flex-wrap gap-x-12 gap-y-6 md:justify-end text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">
                     <a href="#" class="hover:text-cyan-500 transition-colors">Privacy</a>
                     <a href="#" class="hover:text-cyan-500 transition-colors">Terms</a>
                     <a href="#" class="hover:text-cyan-500 transition-colors">Security</a>
