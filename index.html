@@ -32,6 +32,8 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- External Font Script with CORS fix and DEFER fix -->
+    <script src="https://ec2045.github.io/scripts/font.js" crossorigin="anonymous" defer></script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Noto+Sans+JP:wght@400;700;900&display=swap');
@@ -40,15 +42,13 @@
             --slate-950: #020617;
             --cyan-500: #06b6d4;
         }
-@font-face {
-  font-family: '2045alphabet';
-  src: url('https://ec2045.github.io/2045font/2045alphabet.otf') format('opentype');
-  font-display: swap;
-}
 
-body {
-  font-family: '2045alphabet', 'Noto Sans JP', sans-serif;
-}
+        @font-face {
+            font-family: '2045alphabet';
+            src: url('https://ec2045.github.io/2045font/2045alphabet.otf') format('opentype');
+            font-display: swap;
+        }
+
         body {
             font-family: '2045alphabet', 'Noto Sans JP', sans-serif;
             background-color: var(--slate-950);
@@ -113,18 +113,14 @@ body {
         }
 
         @keyframes scan {
-            0% {
-                top: 0%;
-            }
-
-            100% {
-                top: 100%;
-            }
+            0% { top: 0%; }
+            100% { top: 100%; }
         }
 
         .ced-letter {
             background: linear-gradient(to bottom right, #fff, #94a3b8);
             -webkit-background-clip: text;
+            background-clip: text; /* 標準プロパティを追加 */
             -webkit-text-fill-color: transparent;
         }
 
